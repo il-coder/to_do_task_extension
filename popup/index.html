@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="popup.js"></script>
+
+</head>
+
+<body class="p-10">
+
+    <div class="top bg-dark top-rounded p-10" id="top">
+        <span class="font-lg color-white" id="name_head">Your Tasks</span>
+        <button id="signout">Sign Out</button>
+        <input type="text" class="bg-dark" id="task_val" placeholder="New Task" />
+        <span class="font-lg color-blue ico-plus" id='add_btn'></span>
+    </div>
+
+    <div class="main bg-black">
+        <div class="list p-10 bg-black color-white" id="list">
+        </div>
+        <div class="separator"></div>
+        <div class="completed-list bottom-rounded p-10 bg-dark color-white" id="completed_list">
+        </div>
+    </div>
+
+    <div id="firebaseui-auth-container"></div>
+</body>
+
+</html>

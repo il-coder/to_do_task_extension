@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 520px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: violet;
+}
+
+#task_val {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    outline: none;
+    color: white;
+    flex: 1;
+}
+
+.top {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1 1 auto;
+}
+
+.top-rounded {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.bottom-rounded {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.color-blue {
+    color: rgb(148, 148, 248);
+}
+
+.ico-plus {
+    width: 30px;
+    height: 30px;
+    background:
+    linear-gradient(rgb(148, 148, 248),rgb(148, 148, 248)),
+    linear-gradient(rgb(148, 148, 248),rgb(148, 148, 248));
+    background-position:center;
+    background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+    background-repeat:no-repeat;
+}
+
+.ico-plus:hover {
+    background-color: rgba(148, 148, 255, 0.39);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ico-plus:active {
+    filter: drop-shadow(0 0 0 steelblue);
+    transition: filter 0s;
+}
+
+.color-white {
+    color: whitesmoke;
+}
+
+.bg-dark {
+    background-color: rgb(61, 61, 61);
+    background: rgb(61, 61, 61);
+    background-origin: border-box;
+}
+
+.bg-black {
+    background-color: black;
+    background: black;
+    background-origin: border-box;
+}
+
+.font-lg {
+    font-size: 1.5rem;
+}
+
+.list {
+    width: 100%;
+    flex: 1 1 auto;
+    max-height: 215px;
+    overflow: auto;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.completed-list {
+    min-height: 50px;
+    max-height: 215px;
+    width: 100%;
+    margin-top: auto;
+    overflow: auto;
+    flex: 1 1 auto;
+}
+
+.task {
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+.delete_btn_pending, .delete_btn_completed, .complete_btn {
+    background: transparent;
+    color: rgb(148, 148, 248);
+    border: none;
+    outline: none;
+    /* padding: 10px; */
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+}
+
+.delete_btn_pending:hover, .delete_btn_completed:hover, .complete_btn:hover{
+    background-color: rgba(148, 148, 255, 0.39);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.separator {
+    height: 20px;
+}
+
+.sticky {
+    position: sticky;
+    top: -12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: underline;
+}
+
+#signout {
+    background-color: transparent;
+    display: none;
+    color: white;
+    padding: 0.2rem;
+}
+
+#signout:hover {
+    background-color: black;
+    cursor: pointer;
+}
