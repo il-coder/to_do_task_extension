@@ -12,24 +12,30 @@ $(document).ready(function () {
     async function init() {
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
         const firebaseAuth = new Promise((resolve) => {
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
                     $('#name_head').text(`${user.displayName}'s Tasks`);
                     $("#signout").show();
+                    $("#main").show();
+                    $("#top").show();
                     $("#signout").click(function () {
                         firebase.auth().signOut();
                         $("#signout").hide();
                         $('#name_head').text(`Your Tasks`);
                         pending = [];
                         completed = [];
+                        $("#main").hide();
+                        $("#top").hide();
                         refreshTasks();
                     });
                     console.log("State Changed");
                     resolve(true);
                 }
                 else {
-                    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+                    $("#main").hide();
+                    $("#top").hide();
                     ui.start('#firebaseui-auth-container', {
                         signInOptions: [
                             {

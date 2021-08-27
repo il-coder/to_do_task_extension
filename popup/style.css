@@ -23,6 +23,11 @@ body {
     flex: 1;
 }
 
+.center-flex {
+    align-self: center;
+    margin: auto;
+}
+
 .top {
     height: 80px;
     width: 100%;
